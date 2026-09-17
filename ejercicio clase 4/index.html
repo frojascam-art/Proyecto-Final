@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio Dental - Sistema de Reservas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============================================
+       BARRA DE NAVEGACION
+       Estructura lista, sin enlaces reales todavia.
+       El atributo data-pantalla se usara para conectar
+       cada opcion con su vista cuando exista (ver js/app.js
+       y la carpeta pantallas/).
+       ============================================ -->
+  <header class="barra-navegacion">
+    <div class="contenedor fila">
+      <div class="logo">Consultorio Dental</div>
+      <nav>
+        <ul class="menu-navegacion">
+          <li><a href="#" data-pantalla="inicio">Inicio</a></li>
+          <li><a href="#" data-pantalla="agendar-cita">Agendar cita</a></li>
+          <li><a href="#" data-pantalla="mis-citas">Mis citas</a></li>
+          <li><a href="#" data-pantalla="pacientes">Pacientes</a></li>
+          <li><a href="#" data-pantalla="ingresar">Iniciar sesion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================
+       CONTENEDOR PRINCIPAL
+       Aqui se inyecta dinamicamente el contenido de
+       cada pantalla mediante js/app.js. No colocar
+       contenido fijo aqui.
+       ============================================ -->
+  <main id="contenedor-principal" class="contenedor">
+    <!-- TODO: contenido generado por cargarPantalla() en js/app.js -->
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Consultorio Dental. Prototipo estatico.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS DE PANTALLAS
+       TODO: incluir aqui cada archivo de pantallas/ a medida
+       que se implemente (deben ir ANTES de js/app.js porque
+       cada uno se registra usando una funcion definida ahi).
+       Ejemplo:
+       <script src="pantallas/agendar-cita.js"></script>
+       ============================================ -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* ============================================
+   RESET MINIMO
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================
+   VARIABLES DE COLOR Y ESPACIADO
+   TODO: ajustar la paleta definitiva del consultorio
+   ============================================ */
+:root {
+  --color-primario: #2f80ed;
+  --color-primario-oscuro: #1c5fb8;
+  --color-secundario: #56ccf2;
+  --color-fondo: #f5f7fa;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2933;
+  --color-texto-suave: #616e7c;
+  --color-borde: #d9e2ec;
+  --color-exito: #27ae60;
+  --color-error: #eb5757;
+
+  --espaciado-sm: 8px;
+  --espaciado-md: 16px;
+  --espaciado-lg: 24px;
+
+  --radio-borde: 8px;
+}
+
+/* ============================================
+   CLASES DE LAYOUT BASE
+   Se reutilizan en todas las pantallas.
+   ============================================ */
+.contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--espaciado-md);
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-md);
+}
+
+.columna {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: var(--espaciado-lg);
+}
+
+/* ============================================
+   BARRA DE NAVEGACION
+   TODO: estilos definitivos cuando existan las pantallas reales
+   (estado activo, menu movil, etc.)
+   ============================================ */
+.barra-navegacion {
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.barra-navegacion .fila {
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--espaciado-md) 0;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+.menu-navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-md);
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL (PANTALLAS)
+   TODO: cada pantalla podra agregar sus propias clases
+   especificas en un archivo aparte si llega a necesitarlo.
+   ============================================ */
+#contenedor-principal {
+  padding: var(--espaciado-lg) var(--espaciado-md);
+  min-height: 60vh;
+}
+
+footer {
+  padding: var(--espaciado-md);
+  text-align: center;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
