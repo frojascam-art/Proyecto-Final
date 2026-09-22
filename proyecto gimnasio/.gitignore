@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# Datos persistidos localmente (HU5 y siguientes); cada instalacion genera
+# los suyos a partir de los datos de ejemplo, no deben versionarse.
+datos_gimnasio.json
