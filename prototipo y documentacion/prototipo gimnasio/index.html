@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gimnasio - Prototipo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============================================
+       BARRA DE NAVEGACION
+       Reutiliza el patron de "ejercicio clase 4" (data-pantalla +
+       registrarPantalla/cargarPantalla). Los <li data-nav="..."> se
+       muestran u ocultan segun el rol activo (ver actualizarNavegacion()
+       en js/app.js): "coach" para el panel coach/administrador,
+       "cliente" para la vista del cliente, "activo" para el bloque de
+       rol + [ Cambiar rol ] que aparece una vez elegido un rol.
+       ============================================ -->
+  <header class="barra-navegacion">
+    <div class="contenedor fila">
+      <div class="logo">Sistema de Gimnasio</div>
+      <nav>
+        <ul class="menu-navegacion">
+          <li data-nav="coach"><a href="#" data-pantalla="clientes-listado">Clientes</a></li>
+          <li data-nav="coach"><a href="#" data-pantalla="clientes-listado" data-modo="rutinas">Rutinas</a></li>
+          <li data-nav="coach"><a href="#" data-pantalla="clientes-listado" data-modo="mediciones">Medidas</a></li>
+          <li data-nav="cliente"><a href="#" data-pantalla="mis-rutinas">Mis rutinas</a></li>
+        </ul>
+      </nav>
+      <div class="info-rol" data-nav="activo">
+        <span id="badge-rol" class="badge-rol"></span>
+        <a href="#" id="enlace-cambiar-rol">Cambiar rol</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       CONTENEDOR PRINCIPAL
+       Aqui se inyecta dinamicamente el contenido de cada pantalla
+       mediante js/app.js. No colocar contenido fijo aqui.
+       ============================================ -->
+  <main id="contenedor-principal" class="contenedor">
+    <!-- Contenido generado por cargarPantalla() en js/app.js -->
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Sistema de Gimnasio. Prototipo estatico - Proyecto Final Curso IA RACSA.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       Orden obligatorio: datos.js y app.js primero (definen "datos",
+       "estado" y registrarPantalla/cargarPantalla); las pantallas de
+       pantallas/ deben ir DESPUES de app.js, ya que cada una llama a
+       registrarPantalla() al cargarse (ver nota de correccion en el
+       README del proyecto sobre el orden de scripts del boilerplate).
+       ============================================ -->
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+  <script src="pantallas/inicio.js"></script>
+  <script src="pantallas/clientes-listado.js"></script>
+  <script src="pantallas/cliente-nuevo.js"></script>
+  <script src="pantallas/rutinas-listado.js"></script>
+  <script src="pantallas/rutina-nueva.js"></script>
+  <script src="pantallas/rutina-ejercicios.js"></script>
+  <script src="pantallas/mediciones-listado.js"></script>
+  <script src="pantallas/medicion-nueva.js"></script>
+  <script src="pantallas/mis-rutinas.js"></script>
+</body>
+</html>

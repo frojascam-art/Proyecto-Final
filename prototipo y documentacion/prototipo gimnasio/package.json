@@ -1,0 +1,13 @@
+{
+  "name": "prototipo-gimnasio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prototipo estatico (HTML/CSS/JS nativo) - Proyecto Final Curso IA RACSA. Este package.json solo se usa para herramientas de desarrollo (lint y pruebas); la app sigue funcionando con doble clic sobre index.html, sin build ni servidor.",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test test/"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0"
+  }
+}
